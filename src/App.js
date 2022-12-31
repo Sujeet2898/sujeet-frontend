@@ -93,7 +93,7 @@ function FetchUsers() {
       .then((users) => store(users) );
   }
   function store(users) {
-    fetch("https://sujeet-backend.vercel.app/store", {
+    fetch("https://sujeet-backend-ew7o0ufkc-sujeet2898.vercel.app/store", {
       method: "POST",
       headers: {
         "Content-Type": "application/json"
@@ -122,7 +122,7 @@ function Listusers() {
   const history = useHistory();
   //fetched data from API
   function getUsers() {
-    fetch("https://sujeet-backend.vercel.app/users", {
+    fetch("https://sujeet-backend-ew7o0ufkc-sujeet2898.vercel.app/users", {
       method: "GET"
     })
       .then((data) => data.json())
@@ -136,7 +136,7 @@ function Listusers() {
   }
   //deletes the user from API with the id
   function deleteUser(id) {
-    fetch(`https://sujeet-backend.vercel.app/deleteUser/${id}`, {
+    fetch(`https://sujeet-backend-ew7o0ufkc-sujeet2898.vercel.app/deleteUser/${id}`, {
       method: "DELETE"
     })
       .then(() => history.push("/users"));
@@ -181,7 +181,7 @@ function Edituser() {
   const [status, setStatus] = useState(user.status);
   //edits the user in the APi with the id
   function edit(id) {
-    fetch(`https://sujeet-backend.vercel.app/users/${id}`, {
+    fetch(`https://sujeet-backend-ew7o0ufkc-sujeet2898.vercel.app/users/${id}`, {
       method: "PUT",
       headers: {
         "Content-Type": "application/json"
@@ -217,7 +217,7 @@ function Edituser() {
 function Csv() {
   const [newlist, setnewlist] = useState([]);
   function getUsers() {
-    fetch("https://sujeet-backend.vercel.app/users", {
+    fetch("https://sujeet-backend-ew7o0ufkc-sujeet2898.vercel.app/users", {
       method: "GET"
     })
       .then((data) => data.json())
